@@ -145,6 +145,7 @@ float dorRotCount = 0.0;
 
 double deltaTime;
 double currTime, lastTime;
+float giroEclipse=0.5, avance =0.1;
 
 // Se definen todos las funciones.
 void reshapeCallback(GLFWwindow *Window, int widthRes, int heightRes);
@@ -996,6 +997,68 @@ void applicationLoop() {
 
 		// Constantes de animaciones
 		rotHelHelY += 0.5;
+
+		/** Maquinas de estados*/
+		switch(state){
+			case 0:
+				if(numberAdvance == 0)
+					maxAdvance = 65.0;
+				if(numberAdvance == 1)
+					maxAdvance = 49.0;
+				if(numberAdvance == 2)
+					maxAdvance = 44.5;
+				if(numberAdvance == 3)
+					maxAdvance = 49.0;
+				if(numberAdvance == 4)
+					maxAdvance = 44.5;
+				state=1;
+			break;
+			case 1:
+				modelMatrixEclipse = glm::translate(modelMatrixEclipse, glm::vec3(0.0f,0.0f,avance));
+				advanceCount += avance;
+				rotWheelsX += 0.005;
+				rotWheelsY -= 0.02;
+				if(rotWheelsY <=0.0)
+					rotWheelsY = 0.0;
+				if(advanceCount > maxAdvance){
+					advanceCount =0;
+					numberAdvance++;
+					state =2;
+				}
+			break;
+			case 2:
+				modelMatrixEclipse =glm::translate(modelMatrixEclipse, glm::vec3(0.0f,0.0f,0.025f));
+				modelMatrixEclipse =glm::rotate(modelMatrixEclipse, glm::radians(giroEclipse), glm::vec3(0,1,0));
+				rotCount+= giroEclipse;
+				rotWheelsX += 0.005;
+				rotWheelsY += 0.02;
+				if(rotWheelsY >=0.25)
+					rotWheelsY = 0.25;
+				if(rotCount>=90.0f){
+					state=0;
+					rotCount=0;
+				}
+			break;
+			default:
+			break;
+
+			/** Maquina estados Lamnbo*/
+			switch (stateDoor){
+				case 0:
+				dorRotCount +=0.6;
+				if(dorRotCount > 75.0)
+					stateDoor =1;
+				break;
+				case 1:
+					dorRotCount -=0.6;
+					if(dorRotCount < 0.0)
+						stateDoor =0;
+				break;
+			}
+
+		}
+		
+
 
 		glfwSwapBuffers(window);
 	}

@@ -1,0 +1,426 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "CGALib",
+					"jsonFile" : "directory-CGALib-Debug-c25a36b81c9fe6cb6742.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "CGALib",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "00-Introduccion",
+					"jsonFile" : "directory-00-Introduccion-Debug-c8b7a20055b4ed709003.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "00-Introduccion",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "01-AnimacionKeyFrames",
+					"jsonFile" : "directory-01-AnimacionKeyFrames-Debug-217070ddb95408d4ffec.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "01-AnimacionKeyFrames",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "02-SkeletonAnimation",
+					"jsonFile" : "directory-02-SkeletonAnimation-Debug-b2a99c4645e0cead3d06.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "02-SkeletonAnimation",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "03-Terrain",
+					"jsonFile" : "directory-03-Terrain-Debug-0be5c9c742d4be181207.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "03-Terrain",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "04-TerrainBlendMap",
+					"jsonFile" : "directory-04-TerrainBlendMap-Debug-12f9efe7d0064f00f3c1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "04-TerrainBlendMap",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "05-MultipleLights",
+					"jsonFile" : "directory-05-MultipleLights-Debug-204ef82985aa33cb76f9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "05-MultipleLights",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "06-CameraTPS",
+					"jsonFile" : "directory-06-CameraTPS-Debug-a911df546ac800b8819e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "06-CameraTPS",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "07-Colisiones",
+					"jsonFile" : "directory-07-Colisiones-Debug-9624d5e11384d77202ac.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "07-Colisiones",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "08-DepthTesting",
+					"jsonFile" : "directory-08-DepthTesting-Debug-4dbec336235b0b508ee9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "08-DepthTesting",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "09-Blending",
+					"jsonFile" : "directory-09-Blending-Debug-99286a229c32dbd671bf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "09-Blending",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "10-Fog",
+					"jsonFile" : "directory-10-Fog-Debug-93338accc88f700bceba.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "10-Fog",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "11-OpenAL",
+					"jsonFile" : "directory-11-OpenAL-Debug-96ed1986036f607dcd05.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "11-OpenAL",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "12-ShadowMapping",
+					"jsonFile" : "directory-12-ShadowMapping-Debug-04a16a773df3089bbd05.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "12-ShadowMapping",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "13-Particulas",
+					"jsonFile" : "directory-13-Particulas-Debug-991b7018679b788fdbaa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "13-Particulas",
+					"targetIndexes" : 
+					[
+						13
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					],
+					"name" : "CGA",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "00-Introduccion::@6d28e7ca973515348cfa",
+					"jsonFile" : "target-00-Introduccion-Debug-05768577a41b637b422e.json",
+					"name" : "00-Introduccion",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "01-AnimacionKeyFrames::@a33ee4654ab24427bda0",
+					"jsonFile" : "target-01-AnimacionKeyFrames-Debug-cf184dfd14603fa18a22.json",
+					"name" : "01-AnimacionKeyFrames",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "02-SkeletonAnimation::@5d21477f0ac2f35e8681",
+					"jsonFile" : "target-02-SkeletonAnimation-Debug-8e04f53d1d379497761d.json",
+					"name" : "02-SkeletonAnimation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "03-Terrain::@957994437adfa5c81fcb",
+					"jsonFile" : "target-03-Terrain-Debug-2820871bf0aab974a4b1.json",
+					"name" : "03-Terrain",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "04-TerrainBlendMap::@045d279a9c9db38dcbd5",
+					"jsonFile" : "target-04-TerrainBlendMap-Debug-36c80495329fa796c676.json",
+					"name" : "04-TerrainBlendMap",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "05-MultipleLights::@3069a29599249eeaae39",
+					"jsonFile" : "target-05-MultipleLights-Debug-061fa990b75419f27230.json",
+					"name" : "05-MultipleLights",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "06-CameraTPS::@5b0c2872a1c9dc684e26",
+					"jsonFile" : "target-06-CameraTPS-Debug-4b0b2da51e832473eff2.json",
+					"name" : "06-CameraTPS",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "07-Colisiones::@9f386f4f68d6f0717dff",
+					"jsonFile" : "target-07-Colisiones-Debug-8e8edceb534408017b4e.json",
+					"name" : "07-Colisiones",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "08-DepthTesting::@660570413e0e389e3073",
+					"jsonFile" : "target-08-DepthTesting-Debug-d0f1b91a3197c46627b9.json",
+					"name" : "08-DepthTesting",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "09-Blending::@9eb50d950fa05364e3cd",
+					"jsonFile" : "target-09-Blending-Debug-e41c37afbbf6e03b6963.json",
+					"name" : "09-Blending",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "10-Fog::@d90d906818ec554b6531",
+					"jsonFile" : "target-10-Fog-Debug-f17070581d3be78088e4.json",
+					"name" : "10-Fog",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "11-OpenAL::@68fed41be1f17de7b52f",
+					"jsonFile" : "target-11-OpenAL-Debug-553f95c18c4216190879.json",
+					"name" : "11-OpenAL",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "12-ShadowMapping::@35fedbad178f0d2a113a",
+					"jsonFile" : "target-12-ShadowMapping-Debug-b6b4d72041d000b70e92.json",
+					"name" : "12-ShadowMapping",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "13-Particulas::@20129ce54fffe878b1a5",
+					"jsonFile" : "target-13-Particulas-Debug-0875fd8d9f2aeccda1d4.json",
+					"name" : "13-Particulas",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "CGALib::@1a9f62cd0483ef4537e7",
+					"jsonFile" : "target-CGALib-Debug-8eae14d69a05a5f8ac75.json",
+					"name" : "CGALib",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Ale/Desktop/ComputacionGraficaAvanzada/out/build/x64-Debug",
+		"source" : "C:/Users/Ale/Desktop/ComputacionGraficaAvanzada"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
