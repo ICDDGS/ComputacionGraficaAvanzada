@@ -178,6 +178,7 @@ int numPasosBuzz = 0;
 float rotHelHelY = 0.0;
 float rotHelHelBack = 0.0;
 
+
 // Var animate lambo dor
 int stateDoor = 0;
 float dorRotCount = 0.0;
@@ -1275,6 +1276,9 @@ void applicationLoop() {
 			break;
 		}
 
+		//maquina estado Helicoptero
+
+		
 		// Constantes de animaciones
 		rotHelHelY += 0.5;
 		rotHelHelBack += 0.5;
