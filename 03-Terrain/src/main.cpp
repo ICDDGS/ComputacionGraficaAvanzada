@@ -101,7 +101,7 @@ Model guardianModelAnimate;
 // Cybog
 Model cyborgModelAnimate;
 //Terreno
-Terrain terreno(-1,-1, 50, 32, "../Textures/heightmap.png");//indica la forma del terreno
+Terrain terreno(-1,-1, 50, 32, "../Textures/mapa3.png");//indica la forma del terreno
 
 GLuint textureCespedID, textureWallID, textureWindowID, textureHighwayID, textureLandingPadID;
 GLuint skyboxTextureID;
@@ -952,6 +952,7 @@ void applicationLoop() {
 		modelAircraft.render(modelMatrixAircraft);
 
 		// Render for the eclipse car
+		modelMatrixEclipse[3][1] = terreno.getHeightTerrain(modelMatrixEclipse[3][0],modelMatrixEclipse[3][2]);
 		glm::mat4 modelMatrixEclipseChasis = glm::mat4(modelMatrixEclipse);
 		modelMatrixEclipseChasis = glm::scale(modelMatrixEclipse, glm::vec3(0.5, 0.5, 0.5));
 		modelEclipseChasis.render(modelMatrixEclipseChasis);
