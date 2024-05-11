@@ -21,6 +21,7 @@
 #include "Headers/Cylinder.h"
 #include "Headers/Box.h"
 #include "Headers/FirstPersonCamera.h"
+#include "Headers/ThirdPersonCamera.h"
 
 //GLM include
 #define GLM_FORCE_RADIANS
@@ -54,6 +55,7 @@ Shader shaderMulLighting;
 Shader shaderTerrain;
 
 std::shared_ptr<FirstPersonCamera> camera(new FirstPersonCamera());
+std::shared_ptr<Camera> camera(new ThirdPersonCamera());
 
 Sphere skyboxSphere(20, 20);
 Box boxCesped;
@@ -101,6 +103,8 @@ Model modelLampPost2;
 // Modelos animados
 // Mayow
 Model mayowModelAnimate;
+//Personaje
+Model personajeModelAnimate;
 // Cowboy
 Model cowboyModelAnimate;
 // Guardian con lampara
@@ -142,11 +146,13 @@ glm::mat4 modelMatrixAircraft = glm::mat4(1.0);
 glm::mat4 modelMatrixDart = glm::mat4(1.0f);
 glm::mat4 modelMatrixBuzz = glm::mat4(1.0f);
 glm::mat4 modelMatrixMayow = glm::mat4(1.0f);
+glm::mat4 modelMatrixPersonaje = glm::mat4(1.0f);
 glm::mat4 modelMatrixCowboy = glm::mat4(1.0f);
 glm::mat4 modelMatrixGuardian = glm::mat4(1.0f);
 glm::mat4 modelMatrixCyborg = glm::mat4(1.0f);
 
 int animationMayowIndex = 1;
+int animationPersonajeIndex = 1;
 float rotDartHead = 0.0, rotDartLeftArm = 0.0, rotDartLeftHand = 0.0, rotDartRightArm = 0.0, rotDartRightHand = 0.0, rotDartLeftLeg = 0.0, rotDartRightLeg = 0.0;
 float rotBuzzHead = 0.0, rotBuzzLeftarm = 0.0, rotBuzzLeftForeArm = 0.0, rotBuzzLeftHand = 0.0;
 int modelSelected = 0;
@@ -387,7 +393,10 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 	// Mayow
 	mayowModelAnimate.loadModel("../models/mayow/personaje2.fbx");
 	mayowModelAnimate.setShader(&shaderMulLighting);
-	
+
+	//Personaje
+	personajeModelAnimate.loadModel("../models/mayow/personaje2.fbx");
+	personajeModelAnimate.setShader(&shaderMulLighting);
 	// Cowboy
 	cowboyModelAnimate.loadModel("../models/cowboy/Character Running.fbx");
 	cowboyModelAnimate.setShader(&shaderMulLighting);
@@ -697,6 +706,7 @@ void destroy() {
 	modelLamp2.destroy();
 	modelLampPost2.destroy();
 	mayowModelAnimate.destroy();
+	personajeModelAnimate.destroy();
 	cowboyModelAnimate.destroy();
 	guardianModelAnimate.destroy();
 	cyborgModelAnimate.destroy();
@@ -927,6 +937,22 @@ bool processInput(bool continueApplication) {
 	else if (modelSelected == 0 && glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS){
 		modelMatrixMayow = glm::translate(modelMatrixMayow, glm::vec3(0.0, 0.0, -0.02));
 		animationMayowIndex = 0;
+	}
+
+	if (modelSelected == 3 && glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS){
+		modelMatrixPersonaje = glm::rotate(modelMatrixPersonaje, 0.02f, glm::vec3(0, 1, 0));
+		animationPersonajeIndex = 0;
+	} else if (modelSelected == 3 && glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS){
+		modelMatrixPersonaje = glm::rotate(modelMatrixPersonaje, -0.02f, glm::vec3(0, 1, 0));
+		animationPersonajeIndex = 0;
+	}
+	if (modelSelected == 3 && glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS){
+		modelMatrixPersonaje = glm::translate(modelMatrixPersonaje, glm::vec3(0.0, 0.0, 0.02));
+		animationPersonajeIndex = 0;
+	}
+	else if (modelSelected == 3 && glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS){
+		modelMatrixPersonaje = glm::translate(modelMatrixPersonaje, glm::vec3(0.0, 0.0, -0.02));
+		animationPersonajeIndex = 0;
 	}
 
 	glfwPollEvents();
@@ -1339,6 +1365,20 @@ void applicationLoop() {
 		cyborgModelAnimate.setAnimationIndex(1);
 		cyborgModelAnimate.render(modelMatrixCyborgBody);
 
+
+		glm::vec3 ejey = glm::normalize(terrain.getNormalTerrain(modelMatrixPersonaje[3][0], modelMatrixPersonaje[3][2]));
+		glm::vec3 ejex = glm::vec3(modelMatrixPersonaje[0]);
+		glm::vec3 ejez = glm::normalize(glm::cross(ejex, ejey));
+		ejex = glm::normalize(glm::cross(ejey, ejez));
+		modelMatrixPersonaje[0] = glm::vec4(ejex, 0.0);
+		modelMatrixPersonaje[1] = glm::vec4(ejey, 0.0);
+		modelMatrixPersonaje[2] = glm::vec4(ejez, 0.0);
+		modelMatrixPersonaje[3][1] = terrain.getHeightTerrain(modelMatrixPersonaje[3][0], modelMatrixPersonaje[3][2]);
+		glm::mat4 modelMatrixPersonaje = glm::mat4(modelMatrixPersonaje);
+		modelMatrixPersonaje = glm::scale(modelMatrixPersonaje, glm::vec3(0.021f));
+		personajeModelAnimate.setAnimationIndex(animationMayowIndex);
+		personajeModelAnimate.render(modelMatrixMayowBody);
+		animationMayowIndex = 1;
 		/*******************************************
 		 * Skybox
 		 *******************************************/
@@ -1543,3 +1583,4 @@ int main(int argc, char **argv) {
 	destroy();
 	return 1;
 }
+
